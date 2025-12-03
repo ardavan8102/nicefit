@@ -1,0 +1,159 @@
+import 'package:flutter/material.dart';
+import 'package:frino_icons/frino_icons.dart';
+import 'package:iconsax/iconsax.dart';
+import 'package:nice_fit/models/active.dart';
+import 'package:nice_fit/models/activity.dart';
+import 'package:nice_fit/models/ads.dart';
+import 'package:nice_fit/models/exercises.dart';
+import 'package:nice_fit/models/tutorial.dart';
+import 'package:nice_fit/models/video.dart';
+
+List<Ads> adsList = [
+  Ads(
+      title: "Refresh body with\nYoga",
+      imageUrl: "https://s8.uupload.ir/files/5_75n.jpg"),
+  Ads(
+      title: "Now Gym Smarter\nWith AccuGym",
+      imageUrl: "https://s8.uupload.ir/files/6_eoig.jpg"),
+  Ads(
+      title: "Healthy Diet Greater\nin People",
+      imageUrl: "https://s2.uupload.ir/files/23_mmk.jpg"),
+  Ads(
+      title: "Combat Gym Dread and\nFitness Goals",
+      imageUrl: "https://s8.uupload.ir/files/3_abbp.jpg")
+];
+
+List<Activity> activityList = [
+  Activity(
+      color: Color(0xff00ff7f),
+      title: "Steps",
+      status: "2m ago",
+      icon: FrinoIcons.f_forward,
+      count: 8854,
+      manxCount: 10000,
+      unit: ""),
+  Activity(
+      color: Colors.orange,
+      title: "Workout",
+      status: "1m ago",
+      icon: FrinoIcons.f_gym,
+      count: 2.1,
+      manxCount: 5,
+      unit: "hours"),
+  Activity(
+      color: Colors.red,
+      title: "Heart rate",
+      status: "0m ago",
+      icon: Iconsax.heart_tick5,
+      count: 102,
+      manxCount: 200,
+      unit: "bpm")
+];
+
+List<Tutorial> tutorialList = [
+  Tutorial(
+      title: "Exercise With Ball",
+      minsVideo: 70,
+      countVideos: 8,
+      imageUrl: "https://s8.uupload.ir/files/4_mi8u.jpg",
+      content:
+          "Stability balls — also called exercise balls, balance balls, Swiss balls,or fitness balls are more than just fun to sit and bounce on"),
+  Tutorial(
+      title: "Essential Yoga Tutorial",
+      minsVideo: 200,
+      countVideos: 12,
+      imageUrl: "https://s8.uupload.ir/files/9_91qw.jpg",
+      content:
+          "Essential Yoga  for Complete Beginners! All newables\nWelcome - Can Start Here! Get on the  Mat and Start\nBuilding the Foundation of your own"),
+  Tutorial(
+      title: "SixPack ",
+      minsVideo: 120,
+      countVideos: 17,
+      imageUrl: "https://s8.uupload.ir/files/8_hsqw.jpg",
+      content:
+          "Want to lose belly fat and get six pack abs for the summer? Start sculpting your abs with this super effective abs workout app. Workouts are suitable for ..."),
+];
+
+List<Video> videoList = [
+  Video(
+      imageUrl: "https://s8.uupload.ir/files/9_91qw.jpg",
+      title: "Es.Yoga for Complete Beginners-1",
+      coach: "Anjel Alexa",
+      time: "10:32"),
+  Video(
+      imageUrl: "https://s8.uupload.ir/files/12_9k1l.jpg",
+      title: "Es.Yoga for Complete Beginners-2",
+      coach: "Anjel Alexa",
+      time: "20:12"),
+  Video(
+      imageUrl: "https://s8.uupload.ir/files/13_q9qs.jpg",
+      title: "Es.Yoga for Complete Beginners-3",
+      coach: "Anjel Alexa",
+      time: "30:00"),
+  Video(
+      imageUrl: "https://s8.uupload.ir/files/11_6zt.jpg",
+      title: "Es.Yoga for Complete Beginners-4",
+      coach: "Anjel Alexa",
+      time: "10:32"),
+  Video(
+      imageUrl: "https://s8.uupload.ir/files/10_0fad.jpg",
+      title: "Es.Yoga for Complete Beginners-5",
+      coach: "Anjel Alexa",
+      time: "12:32"),
+  Video(
+      imageUrl: "https://s8.uupload.ir/files/9_91qw.jpg",
+      title: "Es.Yoga for Complete Beginners-1",
+      coach: "Anjel Alexa",
+      time: "10:32"),
+  Video(
+      imageUrl: "https://s8.uupload.ir/files/12_9k1l.jpg",
+      title: "Es.Yoga for Complete Beginners-2",
+      coach: "Anjel Alexa",
+      time: "20:12"),
+  Video(
+      imageUrl: "https://s8.uupload.ir/files/13_q9qs.jpg",
+      title: "Es.Yoga for Complete Beginners-3",
+      coach: "Anjel Alexa",
+      time: "30:00"),
+  Video(
+      imageUrl: "https://s8.uupload.ir/files/11_6zt.jpg",
+      title: "Es.Yoga for Complete Beginners-4",
+      coach: "Anjel Alexa",
+      time: "10:32"),
+  Video(
+      imageUrl: "https://s8.uupload.ir/files/10_0fad.jpg",
+      title: "Es.Yoga for Complete Beginners-5",
+      coach: "Anjel Alexa",
+      time: "12:32"),
+];
+
+// List<TabItem> tabItems = List.of([
+//   TabItem(Iconsax.home_15, "Home", mainColor,
+//       labelStyle: TextStyle(color: mainColor)),
+//   TabItem(FrinoIcons.f_gym, "Activity", mainColor,
+//       labelStyle: TextStyle(color: mainColor)),
+//   TabItem(Iconsax.record_circle5, "Record", mainColor,
+//       labelStyle: TextStyle(color: mainColor)),
+//   TabItem(FrinoIcons.f_female, "Account", mainColor,
+//       labelStyle: TextStyle(color: mainColor)),
+// ]);
+
+
+List<Exercises> exercisesList=[
+  Exercises(title: "ABS",imageUrl: 'https://s8.uupload.ir/files/36_2rz6.jpg'),
+  Exercises(title: "CrossFit",imageUrl: 'https://s8.uupload.ir/files/28_4b8u.jpg'),
+  Exercises(title: "Karate",imageUrl:'https://s8.uupload.ir/files/40_93nu.jpg'),
+  Exercises(title: "Trx",imageUrl: 'https://s8.uupload.ir/files/27_q133.jpg'),
+  Exercises(title: "Yoga",imageUrl: 'https://s8.uupload.ir/files/34_75ai.jpg'),
+  Exercises(title: "Zumba",imageUrl:'https://s8.uupload.ir/files/26_8np6.jpg'),
+  Exercises(title: "Boxing",imageUrl: 'https://s8.uupload.ir/files/32_4gqe.jpg'),
+  Exercises(title: "CX Worx",imageUrl: 'https://s8.uupload.ir/files/30_6oba.jpg'),
+  Exercises(title: "Running",imageUrl: 'https://s8.uupload.ir/files/29_mpxo.jpg'),
+  Exercises(title: "Gym",imageUrl:'https://s8.uupload.ir/files/31_bg3y.jpg'),
+];
+
+List<Active> activeList=[
+  Active(title: "CrossFit",count: 8,maxCount: 18,isFirst: true),
+  Active(title: "ABS",count: 2,maxCount: 15),
+  Active(title: "CX Worx",count: 14,maxCount: 15),
+];
