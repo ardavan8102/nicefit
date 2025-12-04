@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:frino_icons/frino_icons.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:nice_fit/consts/colors.dart';
 import 'package:nice_fit/models/active.dart';
 import 'package:nice_fit/models/activity.dart';
 import 'package:nice_fit/models/ads.dart';
 import 'package:nice_fit/models/exercises.dart';
 import 'package:nice_fit/models/tutorial.dart';
 import 'package:nice_fit/models/video.dart';
+import 'package:circular_bottom_navigation/tab_item.dart';
 
 List<Ads> adsList = [
   Ads(
@@ -57,86 +59,86 @@ List<Tutorial> tutorialList = [
       countVideos: 8,
       imageUrl: "https://s8.uupload.ir/files/4_mi8u.jpg",
       content:
-          "Stability balls — also called exercise balls, balance balls, Swiss balls,or fitness balls are more than just fun to sit and bounce on"),
+          "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگره تکنولو در شصت و سه درصد گذشته حال و آینده"),
   Tutorial(
       title: "آمــوزش یوگــا",
       minsVideo: 200,
       countVideos: 12,
       imageUrl: "https://s8.uupload.ir/files/9_91qw.jpg",
       content:
-          "Essential Yoga  for Complete Beginners! All newables\nWelcome - Can Start Here! Get on the  Mat and Start\nBuilding the Foundation of your own"),
+          "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگره تکنولو در شصت و سه درصد گذشته حال و آینده"),
   Tutorial(
       title: "درآوردن سیکــس پـک",
       minsVideo: 120,
       countVideos: 17,
       imageUrl: "https://s8.uupload.ir/files/8_hsqw.jpg",
       content:
-          "Want to lose belly fat and get six pack abs for the summer? Start sculpting your abs with this super effective abs workout app. Workouts are suitable for ..."),
+          "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگره تکنولو در شصت و سه درصد گذشته حال و آینده"),
 ];
 
 List<Video> videoList = [
   Video(
       imageUrl: "https://s8.uupload.ir/files/9_91qw.jpg",
-      title: "Es.Yoga for Complete Beginners-1",
-      coach: "Anjel Alexa",
+      title: "مقدماتی 1",
+      coach: "اردوان اسکندری",
       time: "10:32"),
   Video(
       imageUrl: "https://s8.uupload.ir/files/12_9k1l.jpg",
-      title: "Es.Yoga for Complete Beginners-2",
-      coach: "Anjel Alexa",
+      title: "مقدماتی 2",
+      coach: "اردوان اسکندری",
       time: "20:12"),
   Video(
       imageUrl: "https://s8.uupload.ir/files/13_q9qs.jpg",
-      title: "Es.Yoga for Complete Beginners-3",
-      coach: "Anjel Alexa",
+      title: "مقدماتی 3",
+      coach: "اردوان اسکندری",
       time: "30:00"),
   Video(
       imageUrl: "https://s8.uupload.ir/files/11_6zt.jpg",
-      title: "Es.Yoga for Complete Beginners-4",
-      coach: "Anjel Alexa",
+      title: "مقدماتی 4",
+      coach: "اردوان اسکندری",
       time: "10:32"),
   Video(
       imageUrl: "https://s8.uupload.ir/files/10_0fad.jpg",
-      title: "Es.Yoga for Complete Beginners-5",
-      coach: "Anjel Alexa",
+      title: "مقدماتی 5",
+      coach: "اردوان اسکندری",
       time: "12:32"),
   Video(
       imageUrl: "https://s8.uupload.ir/files/9_91qw.jpg",
-      title: "Es.Yoga for Complete Beginners-1",
-      coach: "Anjel Alexa",
+      title: "مقدماتی 1",
+      coach: "اردوان اسکندری",
       time: "10:32"),
   Video(
       imageUrl: "https://s8.uupload.ir/files/12_9k1l.jpg",
-      title: "Es.Yoga for Complete Beginners-2",
-      coach: "Anjel Alexa",
+      title: "مقدماتی 2",
+      coach: "اردوان اسکندری",
       time: "20:12"),
   Video(
       imageUrl: "https://s8.uupload.ir/files/13_q9qs.jpg",
-      title: "Es.Yoga for Complete Beginners-3",
-      coach: "Anjel Alexa",
+      title: "مقدماتی 3",
+      coach: "اردوان اسکندری",
       time: "30:00"),
   Video(
       imageUrl: "https://s8.uupload.ir/files/11_6zt.jpg",
-      title: "Es.Yoga for Complete Beginners-4",
-      coach: "Anjel Alexa",
+      title: "مقدماتی 4",
+      coach: "اردوان اسکندری",
       time: "10:32"),
   Video(
       imageUrl: "https://s8.uupload.ir/files/10_0fad.jpg",
-      title: "Es.Yoga for Complete Beginners-5",
-      coach: "Anjel Alexa",
+      title: "مقدماتی 5",
+      coach: "اردوان اسکندری",
       time: "12:32"),
 ];
 
-// List<TabItem> tabItems = List.of([
-//   TabItem(Iconsax.home_15, "Home", mainColor,
-//       labelStyle: TextStyle(color: mainColor)),
-//   TabItem(FrinoIcons.f_gym, "Activity", mainColor,
-//       labelStyle: TextStyle(color: mainColor)),
-//   TabItem(Iconsax.record_circle5, "Record", mainColor,
-//       labelStyle: TextStyle(color: mainColor)),
-//   TabItem(FrinoIcons.f_female, "Account", mainColor,
-//       labelStyle: TextStyle(color: mainColor)),
-// ]);
+List<TabItem> tabItems = List.of([
+  TabItem(Iconsax.home_15, "Home", AppSolidColors.primary,
+      labelStyle: TextStyle(color: AppSolidColors.primary)),
+  TabItem(FrinoIcons.f_gym, "Activity", AppSolidColors.primary,
+      labelStyle: TextStyle(color: AppSolidColors.primary)),
+  TabItem(Iconsax.record_circle5, "Record", AppSolidColors.primary,
+      labelStyle: TextStyle(color: AppSolidColors.primary)),
+  TabItem(FrinoIcons.f_female, "Account", AppSolidColors.primary,
+      labelStyle: TextStyle(color: AppSolidColors.primary)),
+]);
 
 
 List<Exercises> exercisesList=[
