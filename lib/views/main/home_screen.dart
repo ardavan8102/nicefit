@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nice_fit/components/appbar.dart';
 import 'package:nice_fit/components/cards/status_chart_card.dart';
+import 'package:nice_fit/components/cards/tutorial_image_card.dart';
 import 'package:nice_fit/components/fields/search_field.dart';
 import 'package:nice_fit/components/vertical_slider.dart';
 import 'package:nice_fit/consts/colors.dart';
@@ -8,6 +9,7 @@ import 'package:nice_fit/consts/sizes.dart';
 import 'package:nice_fit/consts/strings.dart';
 import 'package:nice_fit/data/data.dart';
 import 'package:nice_fit/models/activity.dart';
+import 'package:nice_fit/models/tutorial.dart';
 
 class HomeScreenPage extends StatelessWidget {
   const HomeScreenPage({super.key});
@@ -61,11 +63,45 @@ class HomeScreenPage extends StatelessWidget {
 
 
               // Tutorials List
+              SliverPadding(
+                padding: EdgeInsetsGeometry.fromLTRB(size.width * AppSizes.mainHorizontalPadding, 12, size.width * AppSizes.mainHorizontalPadding, 10),
+                sliver: SliverToBoxAdapter(
+                  child: tutorialSlider(size, textTheme),
+                ),
+              ),
 
             ],
           ),
         ),
       ),
+    );
+  }
+
+  // Tutorial Slider
+  Column tutorialSlider(Size size, TextTheme textTheme) {
+    return Column(
+      crossAxisAlignment: .start,
+      spacing: 16,
+      children: [
+        Text(
+          'آموزش های محبوب',
+          style: textTheme.titleMedium,
+        ),
+        SizedBox(
+          width: size.width,
+          height: size.height * .2,
+          child: ListView.builder(
+            scrollDirection: .horizontal,
+            itemCount: tutorialList.length,
+            itemBuilder: (context, index) {
+              Tutorial tutorial = tutorialList[index];
+    
+              return TutorialImageCard(tutorial: tutorial);
+              
+            },
+          ),
+        ),
+      ],
     );
   }
 

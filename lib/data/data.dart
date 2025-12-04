@@ -52,21 +52,21 @@ List<Activity> activityList = [
 
 List<Tutorial> tutorialList = [
   Tutorial(
-      title: "Exercise With Ball",
+      title: "تمرینــات با توپــ",
       minsVideo: 70,
       countVideos: 8,
       imageUrl: "https://s8.uupload.ir/files/4_mi8u.jpg",
       content:
           "Stability balls — also called exercise balls, balance balls, Swiss balls,or fitness balls are more than just fun to sit and bounce on"),
   Tutorial(
-      title: "Essential Yoga Tutorial",
+      title: "آمــوزش یوگــا",
       minsVideo: 200,
       countVideos: 12,
       imageUrl: "https://s8.uupload.ir/files/9_91qw.jpg",
       content:
           "Essential Yoga  for Complete Beginners! All newables\nWelcome - Can Start Here! Get on the  Mat and Start\nBuilding the Foundation of your own"),
   Tutorial(
-      title: "SixPack ",
+      title: "درآوردن سیکــس پـک",
       minsVideo: 120,
       countVideos: 17,
       imageUrl: "https://s8.uupload.ir/files/8_hsqw.jpg",
