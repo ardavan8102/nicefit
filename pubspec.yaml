@@ -7,6 +7,7 @@ environment:
   sdk: ^3.10.0
 
 dependencies:
+  carousel_slider: ^5.1.1
   cupertino_icons: ^1.0.8
   flutter:
     sdk: flutter
@@ -14,6 +15,7 @@ dependencies:
   frino_icons: ^2.0.0
   get: ^4.7.3
   iconsax: ^0.0.8
+  smooth_page_indicator: ^1.2.1
 
 dev_dependencies:
   flutter_lints: ^6.0.0
@@ -24,12 +26,10 @@ flutter:
 
   uses-material-design: true
 
-
   assets:
     - assets/image/logo.png
     - assets/image/body_builder_man.png
     - assets/image/profile.png
-
 
   fonts:
     - family: Rokh

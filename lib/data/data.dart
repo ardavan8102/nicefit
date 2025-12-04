@@ -10,16 +10,16 @@ import 'package:nice_fit/models/video.dart';
 
 List<Ads> adsList = [
   Ads(
-      title: "Refresh body with\nYoga",
+      title: "آرامش مطلق\n با تمرینات یوگــا",
       imageUrl: "https://s8.uupload.ir/files/5_75n.jpg"),
   Ads(
-      title: "Now Gym Smarter\nWith AccuGym",
+      title: "ورزش هوشمندانه \n با نایـس فیتــ",
       imageUrl: "https://s8.uupload.ir/files/6_eoig.jpg"),
   Ads(
-      title: "Healthy Diet Greater\nin People",
+      title: "یک رژیم غذایی\n سالم و خوشمزه",
       imageUrl: "https://s2.uupload.ir/files/23_mmk.jpg"),
   Ads(
-      title: "Combat Gym Dread and\nFitness Goals",
+      title: "مرز باریک بین\n واقعیت و رویا",
       imageUrl: "https://s8.uupload.ir/files/3_abbp.jpg")
 ];
 

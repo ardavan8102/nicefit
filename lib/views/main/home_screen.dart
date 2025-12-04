@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nice_fit/components/appbar.dart';
 import 'package:nice_fit/components/fields/search_field.dart';
+import 'package:nice_fit/components/vertical_slider.dart';
 import 'package:nice_fit/consts/colors.dart';
 import 'package:nice_fit/consts/sizes.dart';
 
@@ -25,13 +26,24 @@ class HomeScreenPage extends StatelessWidget {
               SliverToBoxAdapter(
                 child: NiceFitAppBar(),
               ),
-
+              
+              // Search Field
               SliverPadding(
                 padding: EdgeInsetsGeometry.fromLTRB(size.width * AppSizes.mainHorizontalPadding, 0, size.width * AppSizes.mainHorizontalPadding, 10),
                 sliver: SliverToBoxAdapter(
                   child: CustomSearchField(),
                 ),
               ),
+              
+
+              // Slider Carousel
+              SliverPadding(
+                padding: EdgeInsetsGeometry.fromLTRB(size.width * AppSizes.mainHorizontalPadding, 12, size.width * AppSizes.mainHorizontalPadding, 10),
+                sliver: SliverToBoxAdapter(
+                  child: CustomVerticalSlider(),
+                ),
+              ),
+
             ],
           ),
         ),
