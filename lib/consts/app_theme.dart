@@ -57,7 +57,7 @@ class AppTheme {
         fontWeight: FontWeight.w500,
       ),
 
-      // Body
+      // Labels
       labelSmall: TextStyle(
         fontFamily: 'Dana',
         fontSize: 12,

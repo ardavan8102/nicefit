@@ -28,6 +28,7 @@ flutter:
   assets:
     - assets/image/logo.png
     - assets/image/body_builder_man.png
+    - assets/image/profile.png
 
 
   fonts:

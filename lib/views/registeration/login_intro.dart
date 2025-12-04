@@ -1,7 +1,9 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:frino_icons/frino_icons.dart';
+import 'package:get/get.dart';
 import 'package:nice_fit/components/buttons/full_width_social_button.dart';
+import 'package:nice_fit/consts/app_routes.dart';
 import 'package:nice_fit/consts/colors.dart';
 import 'package:nice_fit/consts/strings.dart';
 import 'package:nice_fit/gen/assets.gen.dart';
@@ -16,7 +18,7 @@ class LoginIntroPage extends StatelessWidget {
     var textTheme = Theme.of(context).textTheme;
 
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: AppSolidColors.scaffoldBG,
       body: SafeArea(
         child: SizedBox(
           width: size.width,
@@ -154,6 +156,7 @@ class LoginIntroPage extends StatelessWidget {
               // Sign Up Button
               Row(
                 mainAxisAlignment: .center,
+                spacing: 6,
                 children: [
                   Text(
                     'ثبت نام نکردید؟',
@@ -162,11 +165,15 @@ class LoginIntroPage extends StatelessWidget {
                       fontSize: 14,
                     )
                   ),
-                  Text(
-                    'ثبت نام کنید',
-                    style: textTheme.labelLarge!.copyWith(
-                      color: AppSolidColors.primary,
-                      fontSize: 14,
+                  TextButton(
+                    // TODO : change destination page to login/signup form page
+                    onPressed: () => Get.offAndToNamed(AppRoutes.home),
+                    child: Text(
+                      'ثبت نام کنید',
+                      style: textTheme.labelLarge!.copyWith(
+                        color: AppSolidColors.primary,
+                        fontSize: 14,
+                      ),
                     ),
                   )
                 ],
