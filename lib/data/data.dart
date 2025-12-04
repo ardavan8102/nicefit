@@ -25,29 +25,29 @@ List<Ads> adsList = [
 
 List<Activity> activityList = [
   Activity(
-      color: Color(0xff00ff7f),
-      title: "Steps",
-      status: "2m ago",
+      color: Colors.deepPurpleAccent.shade700,
+      title: "قدم ها",
+      status: "2 روز پیش",
       icon: FrinoIcons.f_forward,
       count: 8854,
       manxCount: 10000,
       unit: ""),
   Activity(
       color: Colors.orange,
-      title: "Workout",
-      status: "1m ago",
+      title: "تمرینات",
+      status: "25 دقیقه پیش",
       icon: FrinoIcons.f_gym,
       count: 2.1,
       manxCount: 5,
-      unit: "hours"),
+      unit: "ساعت"),
   Activity(
       color: Colors.red,
-      title: "Heart rate",
-      status: "0m ago",
+      title: "ضربان قلب",
+      status: "3 ساعت پیش",
       icon: Iconsax.heart_tick5,
       count: 102,
       manxCount: 200,
-      unit: "bpm")
+      unit: "BPM")
 ];
 
 List<Tutorial> tutorialList = [

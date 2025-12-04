@@ -7,4 +7,9 @@ class AppStrings {
   // Appbar
   static const String greetingsText = 'روز بخیر';
 
+
+  // Home Screen
+  static const String statusChartCardsTitle = 'وضعیت فعالیت';
+  static const String seeAllButtonText = 'بیشتر';
+
 }
