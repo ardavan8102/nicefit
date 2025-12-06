@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:nice_fit/consts/app_routes.dart';
+import 'package:nice_fit/routes/getx_routes.dart';
 import 'package:nice_fit/consts/app_theme.dart';
 import 'package:nice_fit/controllers/page_handler_controller.dart';
 

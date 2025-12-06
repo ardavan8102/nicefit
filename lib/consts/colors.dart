@@ -10,6 +10,9 @@ class AppSolidColors {
 
 class AppGradientColors {
 
-  
+  static const List<Color> darkOverlay = [
+    Colors.black,
+    Colors.transparent
+  ];
 
 }

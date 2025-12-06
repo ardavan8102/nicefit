@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:nice_fit/consts/colors.dart';
 import 'package:nice_fit/controllers/page_handler_controller.dart';
 import 'package:nice_fit/data/data.dart';
-import 'package:nice_fit/views/main/home_screen.dart';
+import 'package:nice_fit/routes/bottom_nav_pages.dart';
 
 class PageHandlerScreen extends StatefulWidget {
   
@@ -26,18 +26,6 @@ class _PageHandlerScreenState extends State<PageHandlerScreen> {
     super.initState();
   }
 
-  final List<Widget> _pages = [
-
-    HomeScreenPage(),
-
-    Center(child: Text('Page 2')), // Acitivities
-
-    Center(child: Text('Page 3')), // Exercises
-
-    Center(child: Text('Page 4')), // Profile
-
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,7 +37,7 @@ class _PageHandlerScreenState extends State<PageHandlerScreen> {
             Obx(
               () => IndexedStack(
                 index: pageHandlerController.selectedPageIndex.value,
-                children: _pages,
+                children: AppBottomNavBarPages.pages,
               ),
             ),
 
