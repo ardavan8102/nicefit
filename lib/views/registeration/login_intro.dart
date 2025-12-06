@@ -167,7 +167,7 @@ class LoginIntroPage extends StatelessWidget {
                   ),
                   TextButton(
                     // TODO : change destination page to login/signup form page
-                    onPressed: () => Get.offAndToNamed(AppRoutes.home),
+                    onPressed: () => Get.offAndToNamed(AppRoutes.pageHandler),
                     child: Text(
                       'ثبت نام کنید',
                       style: textTheme.labelLarge!.copyWith(

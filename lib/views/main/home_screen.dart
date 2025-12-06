@@ -20,59 +20,55 @@ class HomeScreenPage extends StatelessWidget {
     var size = MediaQuery.of(context).size;
     var textTheme = Theme.of(context).textTheme;
 
-    return Scaffold(
-      backgroundColor: AppSolidColors.scaffoldBG,
-      body: SafeArea(
-        child: SizedBox(
-          height: size.height,
-          width: size.width,
-          child: CustomScrollView(
-            slivers: [
-              // Appbar
-              SliverToBoxAdapter(
-                child: NiceFitAppBar(),
-              ),
-              
-              // Search Field
-              SliverPadding(
-                padding: EdgeInsetsGeometry.fromLTRB(size.width * AppSizes.mainHorizontalPadding, 0, size.width * AppSizes.mainHorizontalPadding, 10),
-                sliver: SliverToBoxAdapter(
-                  child: CustomSearchField(),
-                ),
-              ),
-              
-
-              // Slider Carousel
-              SliverPadding(
-                padding: EdgeInsetsGeometry.fromLTRB(size.width * AppSizes.mainHorizontalPadding, 12, size.width * AppSizes.mainHorizontalPadding, 10),
-                sliver: SliverToBoxAdapter(
-                  child: CustomVerticalSlider(),
-                ),
-              ),
-
-              // Chart Cards
-              SliverPadding(
-                padding: EdgeInsetsGeometry.fromLTRB(size.width * AppSizes.mainHorizontalPadding, 12, size.width * AppSizes.mainHorizontalPadding, 10),
-                sliver: SliverToBoxAdapter(
-                  child: SizedBox(
-                    width: size.width,
-                    child: statusChartCardsSection(textTheme, size),
-                  ),
-                ),
-              ),
-
-
-              // Tutorials List
-              SliverPadding(
-                padding: EdgeInsetsGeometry.fromLTRB(size.width * AppSizes.mainHorizontalPadding, 12, size.width * AppSizes.mainHorizontalPadding, 10),
-                sliver: SliverToBoxAdapter(
-                  child: tutorialSlider(size, textTheme),
-                ),
-              ),
-
-            ],
+    return Container(
+      padding: EdgeInsets.only(bottom: 70),
+      height: size.height,
+      width: size.width,
+      child: CustomScrollView(
+        slivers: [
+          // Appbar
+          SliverToBoxAdapter(
+            child: NiceFitAppBar(),
           ),
-        ),
+          
+          // Search Field
+          SliverPadding(
+            padding: EdgeInsetsGeometry.fromLTRB(size.width * AppSizes.mainHorizontalPadding, 0, size.width * AppSizes.mainHorizontalPadding, 10),
+            sliver: SliverToBoxAdapter(
+              child: CustomSearchField(),
+            ),
+          ),
+          
+
+          // Slider Carousel
+          SliverPadding(
+            padding: EdgeInsetsGeometry.fromLTRB(size.width * AppSizes.mainHorizontalPadding, 12, size.width * AppSizes.mainHorizontalPadding, 10),
+            sliver: SliverToBoxAdapter(
+              child: CustomVerticalSlider(),
+            ),
+          ),
+
+          // Chart Cards
+          SliverPadding(
+            padding: EdgeInsetsGeometry.fromLTRB(size.width * AppSizes.mainHorizontalPadding, 12, size.width * AppSizes.mainHorizontalPadding, 10),
+            sliver: SliverToBoxAdapter(
+              child: SizedBox(
+                width: size.width,
+                child: statusChartCardsSection(textTheme, size),
+              ),
+            ),
+          ),
+
+
+          // Tutorials List
+          SliverPadding(
+            padding: EdgeInsetsGeometry.fromLTRB(size.width * AppSizes.mainHorizontalPadding, 12, size.width * AppSizes.mainHorizontalPadding, 10),
+            sliver: SliverToBoxAdapter(
+              child: tutorialSlider(size, textTheme),
+            ),
+          ),
+
+        ],
       ),
     );
   }

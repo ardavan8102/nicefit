@@ -130,13 +130,13 @@ List<Video> videoList = [
 ];
 
 List<TabItem> tabItems = List.of([
-  TabItem(Iconsax.home_15, "Home", AppSolidColors.primary,
+  TabItem(Iconsax.home_14, "خــانه", AppSolidColors.primary,
       labelStyle: TextStyle(color: AppSolidColors.primary)),
-  TabItem(FrinoIcons.f_gym, "Activity", AppSolidColors.primary,
+  TabItem(FrinoIcons.f_gym, "فعالیـت هـا", AppSolidColors.primary,
       labelStyle: TextStyle(color: AppSolidColors.primary)),
-  TabItem(Iconsax.record_circle5, "Record", AppSolidColors.primary,
+  TabItem(Iconsax.video4, "تمرینــات", AppSolidColors.primary,
       labelStyle: TextStyle(color: AppSolidColors.primary)),
-  TabItem(FrinoIcons.f_female, "Account", AppSolidColors.primary,
+  TabItem(Iconsax.user4, "پروفایل", AppSolidColors.primary,
       labelStyle: TextStyle(color: AppSolidColors.primary)),
 ]);
 
