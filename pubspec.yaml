@@ -15,10 +15,12 @@ dependencies:
     sdk: flutter
   flutter_gen: ^5.12.0
   flutter_staggered_grid_view: ^0.7.0
+  flutter_svg: ^2.2.3
   frino_icons: ^2.0.0
   get: ^4.7.3
   get_storage: ^2.1.1
   iconsax: ^0.0.8
+  shamsi_date: ^1.1.1
   smooth_page_indicator: ^1.2.1
 
 dev_dependencies:
@@ -34,6 +36,8 @@ flutter:
     - assets/image/logo.png
     - assets/image/body_builder_man.png
     - assets/image/profile.png
+    - assets/svg/Notification.svg
+    - assets/svg/Heart.svg
 
   fonts:
     - family: Rokh

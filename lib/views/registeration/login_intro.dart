@@ -8,6 +8,7 @@ import 'package:nice_fit/routes/getx_routes.dart';
 import 'package:nice_fit/consts/colors.dart';
 import 'package:nice_fit/consts/strings.dart';
 import 'package:nice_fit/gen/assets.gen.dart';
+import 'package:shamsi_date/shamsi_date.dart';
 
 class LoginIntroPage extends StatelessWidget {
   LoginIntroPage({super.key});
@@ -179,7 +180,17 @@ class LoginIntroPage extends StatelessWidget {
                       iconSize: 36,
                       func: () {
                         if (usernameEditingController.text != '') {
+
+                          // get date & convert it to Shamsi
+                          final now = DateTime.now();
+                          final jalali = Jalali.fromDateTime(now);
+                          final dateOnlyJalali =
+                            "${jalali.year}/${jalali.month.toString().padLeft(2, '0')}/${jalali.day.toString().padLeft(2, '0')}";
+                          
+                          // write data into storage
                           storage.write('username', usernameEditingController.text);
+                          storage.write('join_date', dateOnlyJalali);
+
                           Get.offAndToNamed(AppRoutes.pageHandler);
                         } else {
                           AppSnackbars.error(textTheme, 'نام خود را باید وارد کنید');

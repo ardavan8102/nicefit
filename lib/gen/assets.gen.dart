@@ -28,10 +28,24 @@ class $AssetsImageGen {
   List<AssetGenImage> get values => [bodyBuilderMan, logo, profile];
 }
 
+class $AssetsSvgGen {
+  const $AssetsSvgGen();
+
+  /// File path: assets/svg/Heart.svg
+  String get heart => 'assets/svg/Heart.svg';
+
+  /// File path: assets/svg/Notification.svg
+  String get notification => 'assets/svg/Notification.svg';
+
+  /// List of all assets
+  List<String> get values => [heart, notification];
+}
+
 class Assets {
   const Assets._();
 
   static const $AssetsImageGen image = $AssetsImageGen();
+  static const $AssetsSvgGen svg = $AssetsSvgGen();
 }
 
 class AssetGenImage {
