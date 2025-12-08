@@ -6,6 +6,7 @@
   <img src="https://img.shields.io/badge/windows-developing-orange" alt="windows" style="margin: 0 12px;" />
   <img src="https://img.shields.io/badge/macos-No-red" alt="macos" style="margin: 0 12px;" />
   <img src="https://img.shields.io/badge/Web-developing-orange" alt="web" style="margin: 0 12px;" />
+  <img src="https://img.shields.io/github/commit-activity/m/ardavan8102/nicefit?color=%23F97316" alt="commit" style="margin: 0 12px;" />
 </p>
 
 <p align="center">
@@ -16,9 +17,6 @@
   <img src="https://img.shields.io/github/languages/code-size/ardavan8102/nicefit?label=Project%20Total%20Size" alt="code-size" style="margin: 0 12px;" />
   <img src="https://img.shields.io/discord/628236119749689354?style=flat&label=Discord%20server" alt="discord" style="margin: 0 12px;" />
 </p>
-
-<!-- Commit count per month
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/ardavan8102/nicefit?color=%23F97316) -->
 
 
 # Nice Fit | اپلیکیشن تناسب اندام
