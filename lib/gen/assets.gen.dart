@@ -37,8 +37,14 @@ class $AssetsSvgGen {
   /// File path: assets/svg/Notification.svg
   String get notification => 'assets/svg/Notification.svg';
 
+  /// File path: assets/svg/Wallet.svg
+  String get wallet => 'assets/svg/Wallet.svg';
+
+  /// File path: assets/svg/letter.svg
+  String get letter => 'assets/svg/letter.svg';
+
   /// List of all assets
-  List<String> get values => [heart, notification];
+  List<String> get values => [heart, notification, wallet, letter];
 }
 
 class Assets {

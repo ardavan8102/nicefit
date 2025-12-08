@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:get_storage/src/storage_impl.dart';
+import 'package:get_storage/get_storage.dart';
+import 'package:nice_fit/components/icons/svg_circle_icon.dart';
 import 'package:nice_fit/consts/colors.dart';
+import 'package:nice_fit/consts/strings.dart';
 import 'package:nice_fit/gen/assets.gen.dart';
 import 'package:nice_fit/views/registeration/login_intro.dart';
 
@@ -37,7 +38,6 @@ class ProfileScreen extends StatelessWidget {
           // Settings Cards
           Container(
             width: size.width,
-            height: size.height * .4,
             decoration: BoxDecoration(
               color: Colors.white,
               border: Border.all(
@@ -49,64 +49,107 @@ class ProfileScreen extends StatelessWidget {
             child: Column(
               children: [
                 // Card 1
-                Container(
-                  decoration: BoxDecoration(
-                    border: Border(
-                      bottom: BorderSide(
-                        width: 1,
-                        color:  Colors.grey.shade300,
-                      )
-                    ),
-                  ),
-                  height: size.height * .1,
-                  width: size.width * .75,
-                  // Card Data
-                  child: Row(
-                    mainAxisAlignment: .spaceBetween,
-                    children: [
-                      // Icon & label
-                      Row(
-                        spacing: 12,
-                        children: [
-                          // Icon
-                          Container(
-                            padding: EdgeInsets.all(6),
-                            height: size.height * .05,
-                            width: size.height * .05,
-                            decoration: BoxDecoration(
-                              color: AppSolidColors.primary.withValues(alpha: .2),
-                              borderRadius: .circular(100),
-                            ),
-                            child: SvgPicture.asset(
-                              Assets.svg.notification,
-                              color: AppSolidColors.primary,
-                              width: 20,
-                              height: 20,
-                            ),
-                          ),
+                profileMenuItemCard(
+                  size,
+                  textTheme,
+                  AppStrings.notificationSection,
+                  Assets.svg.notification,
+                ),
 
-                          // Label
-                          Text(
-                            'اعلانات و پشتیبانی',
-                            style: textTheme.labelMedium,
-                          )
-                        ],
-                      ),
+                // Card 2
+                profileMenuItemCard(
+                  size,
+                  textTheme,
+                  AppStrings.aboutApp,
+                  Assets.svg.heart,
+                ),
 
+                // Card 3
+                profileMenuItemCard(
+                  size,
+                  textTheme,
+                  AppStrings.buySubcription,
+                  Assets.svg.wallet,
+                ),
 
-                      // Chevron Icon
-                      Icon(
-                        Icons.chevron_right
-                      ),
-                      
-                    ],
-                  ),
+                // Card 4
+                profileMenuItemCard(
+                  size,
+                  textTheme,
+                  AppStrings.appSupport,
+                  Assets.svg.letter,
+                  true,
                 ),
               ],
             ),
           ),
         ],
       ),
+    );
+  }
+
+  Widget profileMenuItemCard(
+    Size size,
+    TextTheme textTheme,
+    String label,
+    String svg, [
+    bool isLast = false,
+  ]) {
+    return GestureDetector(
+      onTap: () {
+        
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          border: Border(
+            bottom: BorderSide(
+              width: 1,
+              color:  isLast ? Colors.transparent : Colors.grey.shade300
+            )
+          ),
+        ),
+        height: size.height * .1,
+        width: size.width * .75,
+        // Card Data
+        child: Row(
+          mainAxisAlignment: .spaceBetween,
+          children: [
+            // Icon & label
+            Row(
+              spacing: 12,
+              children: [
+                // Icon
+                svgItemIcon(size, svg),
+      
+                // Label
+                Text(
+                  label,
+                  style: textTheme.labelMedium,
+                )
+              ],
+            ),
+      
+            // Chevron Icon
+            const Icon(
+              Icons.chevron_right
+            ),
+            
+          ],
+        ),
+      ),
+    );
+  }
+
+  Container svgItemIcon(Size size, String asset) {
+    return Container(
+      padding: EdgeInsets.all(6),
+      height: size.height * .05,
+      width: size.height * .05,
+      decoration: BoxDecoration(
+        color: AppSolidColors.primary.withValues(alpha: .2),
+        borderRadius: .circular(100),
+      ),
+      child: SvgCircleIcon(asset: asset)
     );
   }
 

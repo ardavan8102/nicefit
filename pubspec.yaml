@@ -38,6 +38,8 @@ flutter:
     - assets/image/profile.png
     - assets/svg/Notification.svg
     - assets/svg/Heart.svg
+    - assets/svg/Wallet.svg
+    - assets/svg/letter.svg
 
   fonts:
     - family: Rokh
