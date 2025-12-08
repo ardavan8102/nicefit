@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:nice_fit/components/buttons/full_width_social_button.dart';
+import 'package:nice_fit/components/snackbars.dart';
 import 'package:nice_fit/routes/getx_routes.dart';
 import 'package:nice_fit/consts/colors.dart';
 import 'package:nice_fit/consts/strings.dart';
@@ -177,8 +178,12 @@ class LoginIntroPage extends StatelessWidget {
                       buttonText: 'وارد شوید',
                       iconSize: 36,
                       func: () {
-                        storage.write('username', usernameEditingController.text);
-                        Get.offAndToNamed(AppRoutes.pageHandler);
+                        if (usernameEditingController.text != '') {
+                          storage.write('username', usernameEditingController.text);
+                          Get.offAndToNamed(AppRoutes.pageHandler);
+                        } else {
+                          AppSnackbars.error(textTheme, 'نام خود را باید وارد کنید');
+                        }
                       },
                     ),
                   ],
