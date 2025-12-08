@@ -3,9 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:nice_fit/consts/sizes.dart';
 import 'package:nice_fit/consts/strings.dart';
 import 'package:nice_fit/gen/assets.gen.dart';
+import 'package:nice_fit/views/registeration/login_intro.dart';
 
 class NiceFitAppBar extends StatelessWidget {
-  const NiceFitAppBar({super.key});
+  NiceFitAppBar({super.key});
+
+  final username = LoginIntroPage().storage.read('username');
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +55,7 @@ class NiceFitAppBar extends StatelessWidget {
                   SizedBox(
                     width: size.width * .5,
                     child: Text(
-                      'اردوان اسکندری',
+                      username,
                       style: textTheme.labelLarge!.copyWith(
                         fontFamily: 'Rokh'
                       ),

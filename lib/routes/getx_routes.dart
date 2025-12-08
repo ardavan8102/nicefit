@@ -3,6 +3,7 @@ import 'package:nice_fit/page_handler.dart';
 import 'package:nice_fit/views/main/exercise_screen.dart';
 import 'package:nice_fit/views/main/home_screen.dart';
 import 'package:nice_fit/views/registeration/login_intro.dart';
+import 'package:nice_fit/views/registeration/privacy_policy.dart';
 import 'package:nice_fit/views/splash.dart';
 
 class AppRoutes {
@@ -12,6 +13,7 @@ class AppRoutes {
   static const loginIntro = '/login-intro';
   static const home = '/home-screen';
   static const exercise = '/exercise';
+  static const privacyPolicy = '$loginIntro/privacy';
 
 }
 
@@ -42,6 +44,11 @@ class AppPages {
     GetPage(
       name: AppRoutes.exercise,
       page: () => ExerciseScreen()
+    ),
+
+    GetPage(
+      name: AppRoutes.privacyPolicy,
+      page: () => PrivacyPolicyScreen()
     ),
 
   ];

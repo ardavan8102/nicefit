@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nice_fit/consts/app_styles.dart';
 
-class FullWidthSocialButton extends StatelessWidget {
+class FullWidthCustomButton extends StatelessWidget {
   final Size size;
   final Color backGroundColor;
   final Color borderColor;
@@ -10,8 +10,9 @@ class FullWidthSocialButton extends StatelessWidget {
   final Color foregroundColor;
   final String buttonText;
   final double iconSize;
+  final Function() func;
 
-  const FullWidthSocialButton({
+  const FullWidthCustomButton({
     super.key,
     required this.size,
     required this.backGroundColor,
@@ -21,6 +22,7 @@ class FullWidthSocialButton extends StatelessWidget {
     required this.foregroundColor,
     required this.buttonText,
     required this.iconSize,
+    required this.func
   });
 
   @override
@@ -29,7 +31,7 @@ class FullWidthSocialButton extends StatelessWidget {
       width: size.width / 1.2,
       height: size.height / 15,
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: func,
         style: ButtonStyle(
           elevation: WidgetStateProperty.all(0),
           backgroundColor: WidgetStateProperty.all(backGroundColor),
