@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:hugeicons/hugeicons.dart';
 import 'package:nice_fit/components/icons/svg_circle_icon.dart';
 import 'package:nice_fit/consts/colors.dart';
 import 'package:nice_fit/consts/strings.dart';
@@ -53,6 +55,18 @@ class ProfileScreen extends StatelessWidget {
                   size,
                   textTheme,
                   AppStrings.notificationSection,
+                  (){
+                    Get.bottomSheet(
+                      BottomSheetContainerForGETX(
+                        size: size,
+                        content: Column(
+                          children: [
+
+                          ],
+                        ),
+                      ),
+                    );
+                  },
                   Assets.svg.notification,
                 ),
 
@@ -61,6 +75,45 @@ class ProfileScreen extends StatelessWidget {
                   size,
                   textTheme,
                   AppStrings.aboutApp,
+                  (){
+                    Get.bottomSheet(
+                      BottomSheetContainerForGETX(
+                        size: size,
+                        content: Column(
+                          crossAxisAlignment: .center,
+                          mainAxisAlignment: .center,
+                          children: [
+                            Text(
+                              'درباره ${AppStrings.brandName}',
+                              style: textTheme.headlineLarge!.copyWith(
+                                fontSize: 24,
+                                color: AppSolidColors.primary,
+                              ),
+                            ),
+
+                            const SizedBox(height: 12),
+
+                            Text(
+                              AppStrings.aboutAppDescription,
+                              style: textTheme.bodyMedium,
+                              textAlign: .center,
+                            ),
+
+                            const SizedBox(height: 24),
+
+                            AboutCreatorButtonInBottomSheet(textTheme: textTheme),
+
+                            const SizedBox(height: 20),
+
+                            DualSocialButtonInBottomSheet(
+                              textTheme: textTheme,
+                              size: size,
+                            ),
+                          ],
+                        ),
+                      ),
+                    );
+                  },
                   Assets.svg.heart,
                 ),
 
@@ -69,6 +122,9 @@ class ProfileScreen extends StatelessWidget {
                   size,
                   textTheme,
                   AppStrings.buySubcription,
+                  (){
+                    
+                  },
                   Assets.svg.wallet,
                 ),
 
@@ -77,6 +133,9 @@ class ProfileScreen extends StatelessWidget {
                   size,
                   textTheme,
                   AppStrings.appSupport,
+                  (){
+
+                  },
                   Assets.svg.letter,
                   true,
                 ),
@@ -92,13 +151,12 @@ class ProfileScreen extends StatelessWidget {
     Size size,
     TextTheme textTheme,
     String label,
+    Function()? function,
     String svg, [
     bool isLast = false,
   ]) {
     return GestureDetector(
-      onTap: () {
-        
-      },
+      onTap: function,
       child: Container(
         decoration: BoxDecoration(
           border: Border(
@@ -228,6 +286,161 @@ class ProfileScreen extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+class DualSocialButtonInBottomSheet extends StatelessWidget {
+  const DualSocialButtonInBottomSheet({
+    super.key, required this.textTheme, required this.size,
+  });
+
+  final TextTheme textTheme;
+  final Size size;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      spacing: 16,
+      children: [
+        SocialButtonForBottomSheet(
+          textTheme: textTheme,
+          label: 'گیت هاب',
+          bgColor: Colors.black,
+          textColor: Colors.white,
+          icon: HugeIcons.strokeRoundedGithub,
+          function: () {
+    
+          },
+        ),
+    
+        SocialButtonForBottomSheet(
+          textTheme: textTheme,
+          label: 'لینکدیـن',
+          bgColor: Colors.blue,
+          textColor: Colors.white,
+          icon: HugeIcons.strokeRoundedLinkedin02,
+          function: () {
+    
+          },
+        ),
+      ],
+    );
+  }
+}
+
+class SocialButtonForBottomSheet extends StatelessWidget {
+  const SocialButtonForBottomSheet({
+    super.key,
+    required this.textTheme, required this.label, required this.bgColor, required this.textColor, required this.function, required this.icon,
+  });
+
+  final String label;
+  final Color bgColor;
+  final Color textColor;
+  final TextTheme textTheme;
+  final List<List<dynamic>> icon;
+  final Function() function;
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: SizedBox(
+        height: 60,
+        child: ElevatedButton(
+          onPressed: function,
+          style: ButtonStyle(
+            backgroundColor: WidgetStateProperty.all(bgColor),
+            shape: WidgetStateProperty.all(RoundedRectangleBorder(
+              borderRadius: .circular(14),
+            )),
+          ),
+          child: Row(
+            crossAxisAlignment: .center,
+            mainAxisAlignment: .center,
+            spacing: 10,
+            children: [
+              HugeIcon(
+                icon: icon,
+                size: 24,
+                color: Colors.white,
+              ),
+
+              Padding(
+                padding: const EdgeInsets.only(top: 6.0),
+                child: Text(
+                  label,
+                  style: textTheme.labelMedium!.copyWith(
+                    color: textColor,
+                    fontWeight: .w500,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class AboutCreatorButtonInBottomSheet extends StatelessWidget {
+  const AboutCreatorButtonInBottomSheet({
+    super.key,
+    required this.textTheme,
+  });
+
+  final TextTheme textTheme;
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: double.infinity,
+      height: 60,
+      child: ElevatedButton(
+        onPressed: (){
+    
+        },
+        style: ButtonStyle(
+          elevation: WidgetStateProperty.all(0),
+          backgroundColor: WidgetStateProperty.all(AppSolidColors.primary),
+          shape: WidgetStateProperty.all(RoundedRectangleBorder(
+            borderRadius: .circular(16),
+          )),
+        ),
+        child: Text(
+          'درباره سازنده',
+          style: textTheme.labelLarge!.copyWith(
+            color: Colors.white
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class BottomSheetContainerForGETX extends StatelessWidget {
+  
+  const BottomSheetContainerForGETX({
+    super.key,
+    required this.size,
+    required this.content,
+  });
+
+  final Size size;
+  final Column content;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: .only(topLeft: Radius.circular(30), topRight: Radius.circular(30)),
+      ),
+      height: size.height / 2,
+      width: size.width,
+      child: content,
     );
   }
 }

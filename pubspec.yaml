@@ -19,6 +19,7 @@ dependencies:
   frino_icons: ^2.0.0
   get: ^4.7.3
   get_storage: ^2.1.1
+  hugeicons: ^1.1.2
   iconsax: ^0.0.8
   shamsi_date: ^1.1.1
   smooth_page_indicator: ^1.2.1
