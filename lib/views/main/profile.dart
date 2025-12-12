@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:hugeicons/hugeicons.dart';
+import 'package:nice_fit/components/buttons/full_width_orange_button.dart';
+import 'package:nice_fit/components/buttons/social_button.dart';
+import 'package:nice_fit/components/cards/full_width_subscription_card.dart';
+import 'package:nice_fit/components/fields/ticket_form_field.dart';
 import 'package:nice_fit/components/icons/svg_circle_icon.dart';
 import 'package:nice_fit/consts/colors.dart';
 import 'package:nice_fit/consts/strings.dart';
@@ -50,27 +54,8 @@ class ProfileScreen extends StatelessWidget {
             ),
             child: Column(
               children: [
-                // Card 1
-                profileMenuItemCard(
-                  size,
-                  textTheme,
-                  AppStrings.notificationSection,
-                  (){
-                    Get.bottomSheet(
-                      BottomSheetContainerForGETX(
-                        size: size,
-                        content: Column(
-                          children: [
 
-                          ],
-                        ),
-                      ),
-                    );
-                  },
-                  Assets.svg.notification,
-                ),
-
-                // Card 2
+                // Card : About App
                 profileMenuItemCard(
                   size,
                   textTheme,
@@ -83,13 +68,7 @@ class ProfileScreen extends StatelessWidget {
                           crossAxisAlignment: .center,
                           mainAxisAlignment: .center,
                           children: [
-                            Text(
-                              'درباره ${AppStrings.brandName}',
-                              style: textTheme.headlineLarge!.copyWith(
-                                fontSize: 24,
-                                color: AppSolidColors.primary,
-                              ),
-                            ),
+                            bottomSheetCardTitle(textTheme, 'درباره ${AppStrings.brandName}'),
 
                             const SizedBox(height: 12),
 
@@ -101,7 +80,7 @@ class ProfileScreen extends StatelessWidget {
 
                             const SizedBox(height: 24),
 
-                            AboutCreatorButtonInBottomSheet(textTheme: textTheme),
+                            FullWidthAccentColorButton(textTheme: textTheme, label: 'دربــاره سازنــده'),
 
                             const SizedBox(height: 20),
 
@@ -109,6 +88,8 @@ class ProfileScreen extends StatelessWidget {
                               textTheme: textTheme,
                               size: size,
                             ),
+
+                            const SizedBox(height: 24),
                           ],
                         ),
                       ),
@@ -117,32 +98,95 @@ class ProfileScreen extends StatelessWidget {
                   Assets.svg.heart,
                 ),
 
-                // Card 3
+                // Card : Subscription
                 profileMenuItemCard(
                   size,
                   textTheme,
                   AppStrings.buySubcription,
                   (){
-                    
+                    Get.bottomSheet(
+                      BottomSheetContainerForGETX(
+                        size: size,
+                        content: Column(
+                          crossAxisAlignment: .center,
+                          mainAxisAlignment: .center,
+                          children: [
+                            bottomSheetCardTitle(textTheme, 'کاربر ویژه ما شوید'),
+
+                            const SizedBox(height: 10),
+
+                            Text(
+                              'با خرید هرکدام از اشتراک های زیر از مزایای ویژه‌ای برخوردار شوید :)',
+                              style: textTheme.bodyMedium!.copyWith(
+                                height: 2
+                              ),
+                              textAlign: .center,
+                            ),
+
+                            const SizedBox(height: 24),
+
+                            // Subs
+                            BottomSheetSubscriptionCards(size: size, textTheme: textTheme),
+
+                            const SizedBox(height: 30),
+                          ],
+                        ),
+                      ),
+                    );
                   },
                   Assets.svg.wallet,
                 ),
 
-                // Card 4
+                // Card : Send Ticket
                 profileMenuItemCard(
                   size,
                   textTheme,
                   AppStrings.appSupport,
                   (){
+                    Get.bottomSheet(
+                      BottomSheetContainerForGETX(
+                        size: size,
+                        content: Column(
+                          crossAxisAlignment: .center,
+                          mainAxisAlignment: .center,
+                          children: [
+                            bottomSheetCardTitle(textTheme, 'ارسال درخواست'),
 
+                            const SizedBox(height: 20),
+
+                            // Form
+                            SendTicketBottomSheetForm(),
+                          
+                            const SizedBox(height: 18),
+
+                            // Button Submit
+                            FullWidthAccentColorButton(textTheme: textTheme, label: 'ارسال نهایی'),
+
+                            const SizedBox(height: 30),
+
+                          ],
+                        ),
+                      ),
+                    );
                   },
                   Assets.svg.letter,
                   true,
                 ),
+              
               ],
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  Text bottomSheetCardTitle(TextTheme textTheme, String msg) {
+    return Text(
+      msg,
+      style: textTheme.headlineLarge!.copyWith(
+        fontSize: 24,
+        color: AppSolidColors.primary,
       ),
     );
   }
@@ -290,6 +334,100 @@ class ProfileScreen extends StatelessWidget {
   }
 }
 
+class SendTicketBottomSheetForm extends StatelessWidget {
+  const SendTicketBottomSheetForm({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      spacing: 18,
+      children: [
+        // Name & Phone
+        Row(
+          spacing: 18,
+          children: [
+            Expanded(
+              child: FormFieldWidget(
+                keyboardType: .name,
+                hintText: 'اردوان اسکندری',
+                labelText: 'نام شما',
+              ),
+            ),
+    
+            Expanded(
+              child: FormFieldWidget(
+                keyboardType: .phone,
+                hintText: '09123456789',
+                labelText: 'تلفن شما',
+              ),
+            ),
+          ],
+        ),
+      
+        Column(
+          spacing: 18,
+          children: [
+            // Email
+            FormFieldWidget(
+              keyboardType: .emailAddress,
+              hintText: 'ardavaneskandari007@gmail.com',
+              labelText: 'ایمیل شما',
+            ),
+    
+            // Request Text
+            FormFieldWidget(
+              keyboardType: .multiline,
+              hintText: 'پیگیری تراکنش 12345',
+              labelText: 'درخواست شما',
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+}
+
+class BottomSheetSubscriptionCards extends StatelessWidget {
+  const BottomSheetSubscriptionCards({
+    super.key,
+    required this.size,
+    required this.textTheme,
+  });
+
+  final Size size;
+  final TextTheme textTheme;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      spacing: 20,
+      children: [
+        // Bronze  sub
+        FullWidthSubscriptionCardItem(
+          size: size,
+          textTheme: textTheme,
+          color: AppSolidColors.bronze,
+          label: 'اشتراکــ بـرونــزی',
+          subtext: 'تا 180 روز از مزایای vip برخودار شوید',
+          img: Assets.image.bronzeStar.path,
+        ),
+    
+        // Diamond sub
+        FullWidthSubscriptionCardItem(
+          size: size,
+          textTheme: textTheme,
+          color: AppSolidColors.diamond,
+          label: 'اشتراکــ الــمــاسیـــ',
+          subtext: 'تا 360 روز از مزایای vip برخودار شوید',
+          img: Assets.image.diamondHeart.path,
+        ),
+      ],
+    );
+  }
+}
+
 class DualSocialButtonInBottomSheet extends StatelessWidget {
   const DualSocialButtonInBottomSheet({
     super.key, required this.textTheme, required this.size,
@@ -303,7 +441,7 @@ class DualSocialButtonInBottomSheet extends StatelessWidget {
     return Row(
       spacing: 16,
       children: [
-        SocialButtonForBottomSheet(
+        SocialCustomButtonWithIcon(
           textTheme: textTheme,
           label: 'گیت هاب',
           bgColor: Colors.black,
@@ -314,7 +452,7 @@ class DualSocialButtonInBottomSheet extends StatelessWidget {
           },
         ),
     
-        SocialButtonForBottomSheet(
+        SocialCustomButtonWithIcon(
           textTheme: textTheme,
           label: 'لینکدیـن',
           bgColor: Colors.blue,
@@ -325,96 +463,6 @@ class DualSocialButtonInBottomSheet extends StatelessWidget {
           },
         ),
       ],
-    );
-  }
-}
-
-class SocialButtonForBottomSheet extends StatelessWidget {
-  const SocialButtonForBottomSheet({
-    super.key,
-    required this.textTheme, required this.label, required this.bgColor, required this.textColor, required this.function, required this.icon,
-  });
-
-  final String label;
-  final Color bgColor;
-  final Color textColor;
-  final TextTheme textTheme;
-  final List<List<dynamic>> icon;
-  final Function() function;
-
-  @override
-  Widget build(BuildContext context) {
-    return Expanded(
-      child: SizedBox(
-        height: 60,
-        child: ElevatedButton(
-          onPressed: function,
-          style: ButtonStyle(
-            backgroundColor: WidgetStateProperty.all(bgColor),
-            shape: WidgetStateProperty.all(RoundedRectangleBorder(
-              borderRadius: .circular(14),
-            )),
-          ),
-          child: Row(
-            crossAxisAlignment: .center,
-            mainAxisAlignment: .center,
-            spacing: 10,
-            children: [
-              HugeIcon(
-                icon: icon,
-                size: 24,
-                color: Colors.white,
-              ),
-
-              Padding(
-                padding: const EdgeInsets.only(top: 6.0),
-                child: Text(
-                  label,
-                  style: textTheme.labelMedium!.copyWith(
-                    color: textColor,
-                    fontWeight: .w500,
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class AboutCreatorButtonInBottomSheet extends StatelessWidget {
-  const AboutCreatorButtonInBottomSheet({
-    super.key,
-    required this.textTheme,
-  });
-
-  final TextTheme textTheme;
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      width: double.infinity,
-      height: 60,
-      child: ElevatedButton(
-        onPressed: (){
-    
-        },
-        style: ButtonStyle(
-          elevation: WidgetStateProperty.all(0),
-          backgroundColor: WidgetStateProperty.all(AppSolidColors.primary),
-          shape: WidgetStateProperty.all(RoundedRectangleBorder(
-            borderRadius: .circular(16),
-          )),
-        ),
-        child: Text(
-          'درباره سازنده',
-          style: textTheme.labelLarge!.copyWith(
-            color: Colors.white
-          ),
-        ),
-      ),
     );
   }
 }

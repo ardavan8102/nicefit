@@ -18,6 +18,14 @@ class $AssetsImageGen {
   AssetGenImage get bodyBuilderMan =>
       const AssetGenImage('assets/image/body_builder_man.png');
 
+  /// File path: assets/image/bronze-star.png
+  AssetGenImage get bronzeStar =>
+      const AssetGenImage('assets/image/bronze-star.png');
+
+  /// File path: assets/image/diamond_heart.png
+  AssetGenImage get diamondHeart =>
+      const AssetGenImage('assets/image/diamond_heart.png');
+
   /// File path: assets/image/logo.png
   AssetGenImage get logo => const AssetGenImage('assets/image/logo.png');
 
@@ -25,7 +33,13 @@ class $AssetsImageGen {
   AssetGenImage get profile => const AssetGenImage('assets/image/profile.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [bodyBuilderMan, logo, profile];
+  List<AssetGenImage> get values => [
+    bodyBuilderMan,
+    bronzeStar,
+    diamondHeart,
+    logo,
+    profile,
+  ];
 }
 
 class $AssetsSvgGen {

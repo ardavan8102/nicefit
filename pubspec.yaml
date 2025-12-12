@@ -41,6 +41,8 @@ flutter:
     - assets/svg/Heart.svg
     - assets/svg/Wallet.svg
     - assets/svg/letter.svg
+    - assets/image/bronze-star.png
+    - assets/image/diamond_heart.png
 
   fonts:
     - family: Rokh

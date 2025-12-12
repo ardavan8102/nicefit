@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nice_fit/consts/app_styles.dart';
+import 'package:nice_fit/styles/app_styles.dart';
 
 class FullWidthCustomButton extends StatelessWidget {
   final Size size;
