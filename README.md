@@ -3,9 +3,9 @@
 <p align="center">
   <img src="https://img.shields.io/badge/android-Yes-green" alt="android" style="margin: 0 12px;" />
   <img src="https://img.shields.io/badge/ios-Yes-green" alt="ios" style="margin: 0 12px;" />
-  <img src="https://img.shields.io/badge/windows-developing-orange" alt="windows" style="margin: 0 12px;" />
+  <img src="https://img.shields.io/badge/windows-No-orange" alt="windows" style="margin: 0 12px;" />
   <img src="https://img.shields.io/badge/macos-No-red" alt="macos" style="margin: 0 12px;" />
-  <img src="https://img.shields.io/badge/Web-developing-orange" alt="web" style="margin: 0 12px;" />
+  <img src="https://img.shields.io/badge/Web-No-orange" alt="web" style="margin: 0 12px;" />
   <img src="https://img.shields.io/github/commit-activity/m/ardavan8102/nicefit?color=%23F97316" alt="commit" style="margin: 0 12px;" />
 </p>
 
@@ -15,7 +15,6 @@
   <img src="https://img.shields.io/github/stars/ardavan8102/nicefit?style=flat?label=Repo%20stars" alt="stars" style="margin: 0 12px;" />
   <img src="https://img.shields.io/github/followers/ardavan8102?style=flat?label=Publisher's%20Followers" alt="followers" style="margin: 0 12px;" />
   <img src="https://img.shields.io/github/languages/code-size/ardavan8102/nicefit?label=Project%20Total%20Size" alt="code-size" style="margin: 0 12px;" />
-  <img src="https://img.shields.io/discord/628236119749689354?style=flat&label=Discord%20server" alt="discord" style="margin: 0 12px;" />
 </p>
 
 
