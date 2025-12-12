@@ -30,11 +30,6 @@ Application for fitness workouts and tracking body status.
 In this project, I got to know and learn some interesting packages like ``flutter_staggered_grid_view, carousel_slider, and circle_chart``. On the other hand, staggered_grid_view required ``CustomScrollView``, so I mastered that as well; things like Slivers are also included in this. Combining these packages with getx had its challenges, but I liked the outcome.
 
 
-## 📷 Demo Gif
-
-![Demo Video](https://github-production-user-asset-6210df.s3.amazonaws.com/77455553/526066402-51954b3a-33bf-4a20-9084-91d1fd18e256.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20251212%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251212T204546Z&X-Amz-Expires=300&X-Amz-Signature=9cf45d1a331b43a69ee8ce79fdebbd6e7eb164ce0b078aac686d5e17b061488f&X-Amz-SignedHeaders=host)
-
-
 ## 💻 Tech Stack
 
 **Client:** Dart, Flutter
@@ -42,19 +37,31 @@ In this project, I got to know and learn some interesting packages like ``flutte
 Packages :
 
 ```diff
-+ carousel_slider
-+ circle_chart
-+ circular_bottom_navigation
-+ flutter_gen
-+ flutter_staggered_grid_view
-+ flutter_svg
-+ frino_icons
-+ get
-+ get_storage
-+ hugeicons
-+ iconsax
-+ shamsi_date
-+ smooth_page_indicator
+! carousel_slider
+
+! circle_chart
+
+! circular_bottom_navigation
+
+! flutter_gen
+
+! flutter_staggered_grid_view
+
+! flutter_svg
+
+! frino_icons
+
+! get
+
+! get_storage
+
+! hugeicons
+
+! iconsax
+
+! shamsi_date
+
+! smooth_page_indicator
 ```
 
 
