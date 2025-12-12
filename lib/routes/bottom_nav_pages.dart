@@ -11,8 +11,6 @@ class AppBottomNavBarPages {
 
     HomeScreenPage(),
 
-    Center(child: Text('Page 2')), // Acitivities
-
     ExerciseScreen(), // Exercises
 
     ProfileScreen(), // Profile
