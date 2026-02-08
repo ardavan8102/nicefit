@@ -30,6 +30,21 @@ Application for fitness workouts and tracking body status.
 In this project, I got to know and learn some interesting packages like ``flutter_staggered_grid_view, carousel_slider, and circle_chart``. On the other hand, staggered_grid_view required ``CustomScrollView``, so I mastered that as well; things like Slivers are also included in this. Combining these packages with getx had its challenges, but I liked the outcome.
 
 
+## 📸 Screenshots
+
+<p align="left">
+
+  <img src="https://github.com/user-attachments/assets/8d052299-b339-4e32-93d8-18fe5432ab34" width="280" loading="lazy" />
+  <img src="https://github.com/user-attachments/assets/a22e11d9-0ad3-400f-91d3-2b1a0e96a75e" width="280" loading="lazy" />
+  <img src="https://github.com/user-attachments/assets/97579b21-221a-4aa7-971d-85cd9038083b" width="280" loading="lazy" />
+  <img src="https://github.com/user-attachments/assets/c581a41a-efa0-4bdb-b3c8-842fc68b3b73" width="280" loading="lazy" />
+  <img src="https://github.com/user-attachments/assets/51cfa1e2-b1e2-4aa6-8cb6-789fcc1a20a5" width="280" loading="lazy" />
+  <img src="https://github.com/user-attachments/assets/ffe1ec97-2998-43c8-8acd-b1cda4d61142" width="280" loading="lazy" />
+
+</p>
+
+
+
 ## 💻 Tech Stack
 
 **Client:** Dart, Flutter
